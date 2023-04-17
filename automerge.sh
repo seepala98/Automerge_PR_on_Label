@@ -38,7 +38,7 @@ do
     # If the pull request is mergeable, approved, and has passed all checks, merge it
     if [[ "$MERGEABLE" == "true" && "$CHECKS" == "clean" && "$MERGED" == "false" ]]; then
         # Merge the pull request
-        curl -X PUT -H "Authorization: token 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" "https://api.github.com/repos/$USERNAME/$REPOSITORY/pulls/$PR_NUMBER/merge"
+        curl -X PUT -H "Authorization: token <token>" "https://api.github.com/repos/$USERNAME/$REPOSITORY/pulls/$PR_NUMBER/merge"
 
         # Print a message indicating that the pull request was merged
         echo "Pull request #$PR_NUMBER merged"
